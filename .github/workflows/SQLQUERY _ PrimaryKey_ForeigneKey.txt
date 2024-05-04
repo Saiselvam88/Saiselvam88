@@ -1,0 +1,54 @@
+--Primary Key
+
+select * from employee
+
+ALTER TABLE EMPLOYEE alter column id int not null
+
+alter table employee add constraint pri_k Primary key (ID)
+
+select * from employee
+
+insert into employee values (1, 'Amit', 32, 60000, 'Lucknow', 'HR', 'Male', 'UP', 'India')
+
+insert into employee values (6, 'Nilesh', 39, 90000, 'Patna', 'IT', 'Male', 'Bihar', 'India')
+
+update employee set id = 5 where id = 6
+
+--FOREIGN KEY
+
+select * from employee -- Primary Kay on ID Column
+
+select * from project -- Foreign key
+
+ALTER TABLE PROJECT  ADD CONSTRAINT F_K FOREIGN KEY (P_ID) REFERENCES EMPLOYEE(ID)
+
+
+insert into project values (6, 'Olt', 'WA')
+
+insert into employee values (6, 'Ananya', 32, 40000, 'Merrut', 'HR', 'Finance', 'UP', 'India')
+
+select * from employee
+
+select * from project
+
+insert into project values (20, 'Calo', 'WA')
+
+alter table project add constraint f_ky Foreign key(P_id) REFERENCES EMPLOYEE(ID)
+
+insert into employee values (20, 'Ana', 32, 40000, 'Merrut', 'HR', 'Finance', 'UP', 'India')
+
+SELECT * FROM Employee
+
+alter table project add constraint f_ky Foreign key(P_id) REFERENCES EMPLOYEE(ID)
+
+
+select * from employee
+
+select * from project
+
+delete from employee where id = 20
+
+delete from project where p_id = 20
+
+delete from employee where id = 20
+
